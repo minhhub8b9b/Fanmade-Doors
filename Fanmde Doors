@@ -8,7 +8,7 @@ coroutine.wrap(function()
         wait(500)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Doors-Si-u-Kh-C-p-1/refs/heads/main/Smiler"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Smiley"))()
 
 end
 
