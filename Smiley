@@ -3,7 +3,7 @@ local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/MuhXd
 
 local entity = Creator.createEntity({
     CustomName = "Smiley",
-    Model = "https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/Smiler.rbxm?raw=true",
+    Model = "https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/Smiley.rbxm?raw=true",
     Speed = 500,
     DelayTime = 6,
     HeightOffset = 1,
