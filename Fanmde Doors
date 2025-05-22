@@ -13,3 +13,39 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-D
 end
 
 end)()
+
+-- Smiley
+coroutine.wrap(function()
+    while true do
+        wait(120)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Smiley"))()
+
+end
+
+end)()
+
+-- Smiley
+coroutine.wrap(function()
+    while true do
+        wait(240)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Smiley"))()
+
+end
+
+end)()
+
+-- Smiley
+coroutine.wrap(function()
+    while true do
+        wait(480)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Smiley"))()
+
+end
+
+end)()
