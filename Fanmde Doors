@@ -14,10 +14,22 @@ end
 
 end)()
 
--- A-60
+-- A-60 Phase 1
 coroutine.wrap(function()
     while true do
         wait(220)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/A-60"))()
+
+end
+
+end)()
+
+-- A-60 Phase 2
+coroutine.wrap(function()
+    while true do
+        wait(240)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/A-60"))()
