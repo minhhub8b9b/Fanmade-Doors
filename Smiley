@@ -5,7 +5,7 @@ local entity = Creator.createEntity({
     CustomName = "Smiley",
     Model = "https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/Smiley.rbxm?raw=true",
     Speed = 500,
-    DelayTime = 6,
+    DelayTime = 9,
     HeightOffset = 1,
     CanKill = true,
     KillRange = 50,
@@ -13,12 +13,12 @@ local entity = Creator.createEntity({
     BackwardsMovement = false,
     FlickerLights = {
         true,
-        5,
+        7,
     },
     Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 1,
+        Min = 2,
+        Max = 2,
+        WaitTime = 2,
     },
     -- Đã xóa CamShake
 })
