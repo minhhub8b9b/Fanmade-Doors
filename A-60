@@ -5,7 +5,7 @@ local entity = Creator.createEntity({
     CustomName = "A-60",
     Model = "rbxassetid://16138462624",
     Speed = 1300,
-    DelayTime = 4,
+    DelayTime = 13,
     HeightOffset = 1,
     CanKill = true,
     KillRange = 60,
@@ -13,12 +13,12 @@ local entity = Creator.createEntity({
     BackwardsMovement = false,
     FlickerLights = {
         true,
-        3,
+        10,
     },
     Cycles = {
         Min = 10,
         Max = 10,
-        WaitTime = 1,
+        WaitTime = 0,
     },
     -- Đã xóa CamShake
 })
