@@ -2,7 +2,7 @@ local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/MuhXd
 -- Create entity
 
 local entity = Creator.createEntity({
-    CustomName = "A-60",
+    CustomName = "A-60 Phase 1",
     Model = "https://github.com/plamen6789/DoorsEntityModels/blob/main/A-60.rbxm?raw=true",
     Speed = 100,
     DelayTime = 5,
