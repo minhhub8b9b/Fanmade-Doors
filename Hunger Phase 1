@@ -1,0 +1,65 @@
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local function spawnHunger()
+    local HungerModel = game:GetObjects("https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/hunger.rbxm?raw=true")[1]
+    HungerModel.Name = "Hunger"
+
+    shockerModel.PrimaryPart = HungerModel:FindFirstChild("HumanoidRootPart") or HungerModel:FindFirstChildWhichIsA("Part")
+
+    local camera = Workspace.CurrentCamera
+    shockerModel:SetPrimaryPartCFrame(camera.CFrame * CFrame.new(0, 0, -7))
+    shockerModel.Parent = Workspace
+
+    local oogaBoogaaPart = HungerModel:WaitForChild("OOGA BOOGAAAA")
+
+    local lookDuration = 4
+    local startTime = tick()
+    local playerLookingAtShocker = true
+
+    while playerLookingAtHunger do
+        wait(0.1)
+
+        local angle = (oogaBoogaaPart.Position - character.PrimaryPart.Position).unit
+        local direction = camera.CFrame.LookVector
+
+        if (angle:Dot(direction) > 0.9) then
+            if tick() - startTime >= lookDuration then
+                humanoid:TakeDamage(30)
+                playerLookingAtHunger = false
+
+                local speed = 10
+                local targetPosition = character.PrimaryPart.Position
+
+                while oogaBoogaaPart.Position.Y > targetPosition.Y do
+                    local directionToPlayer = (targetPosition - oogaBoogaaPart.Position).unit
+                    oogaBoogaaPart.Position = oogaBoogaaPart.Position + directionToPlayer * speed * 0.1
+                    wait(0.1)
+                end
+
+                oogaBoogaaPart.CanCollide = false
+                oogaBoogaaPart.Anchored = false
+                wait(3)
+                shockerModel:Destroy()
+                game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Hunger"
+                firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to who you call Hunger...","Dont look at it or it stuns you!"},"Blue")
+                break
+            end
+        else
+            oogaBoogaaPart.CanCollide = false
+            oogaBoogaaPart.Anchored = false
+            break
+        end
+    end
+
+    oogaBoogaaPart.CanCollide = false
+    oogaBoogaaPart.Anchored = false
+    wait(3)
+    HungerModel:Destroy()
+end
+
+spawnHunger()
