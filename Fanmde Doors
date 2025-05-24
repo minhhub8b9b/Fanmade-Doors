@@ -37,3 +37,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-D
 end
 
 end)()
+
+-- Hunger Phase 1
+coroutine.wrap(function()
+    while true do
+        wait(35)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/A-60%20Phase%202"))()
+
+end
+
+end)()
