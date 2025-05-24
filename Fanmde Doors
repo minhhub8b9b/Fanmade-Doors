@@ -38,13 +38,13 @@ end
 
 end)()
 
--- Hunger Phase 1
+-- Hunger
 coroutine.wrap(function()
     while true do
-        wait(35)
+        wait(100)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Hunger%20Phase%201"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/minhhub8b9b/Fanmade-Doors/refs/heads/main/Hunger"))()
 
 end
 
